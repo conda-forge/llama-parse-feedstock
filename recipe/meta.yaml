@@ -1,5 +1,5 @@
 {% set name = "llama-parse" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_parse-{{ version }}.tar.gz
-  sha256: ee521e9422db48dbdf00303cb6e90f1066131960b5ca4e14f5b5a6db6b7917e2
+  sha256: d723af84d6a1fc99eb431915d21865d20b76d8a246dbaa124d1f96c956a644f7
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8.1,<4.0
-    - llama-index-core >=0.10.7
+    - llama-index-core >=0.10.29
 
 test:
   imports:
