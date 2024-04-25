@@ -1,5 +1,5 @@
 {% set name = "llama-parse" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_parse-{{ version }}.tar.gz
-  sha256: d723af84d6a1fc99eb431915d21865d20b76d8a246dbaa124d1f96c956a644f7
+  sha256: fa04c09730b102155f6505de9cf91998c86d334581f0f12597c5eb47ca5db859
 
 build:
   noarch: python
