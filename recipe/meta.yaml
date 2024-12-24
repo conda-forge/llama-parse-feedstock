@@ -12,17 +12,17 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
     - pydantic !=2.10
     - click >=8.1.7,<9.0.0
-    - python >=3.8.1,<4.0
+    - python >={{ python_min }},<4.0
     - llama-index-core >=0.11.0
 
 test:
@@ -32,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   summary: Parse files into RAG-Optimized formats.
