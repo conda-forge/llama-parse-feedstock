@@ -1,5 +1,5 @@
 {% set name = "llama-parse" %}
-{% set version = "0.6.44" %}
+{% set version = "0.6.45" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/llama_parse-{{ version }}.tar.gz
-  sha256: f7d2b3935724741ac9b1261750cb13dbb74cffaa41b1d8f63d7e107acff709c6
+  sha256: 2399158e7508a4f6e6facb259b16816e9480b7ae5951f99676b078fa4f4a3c9c
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ requirements:
     - poetry-core
     - pip
   run:
-    - llama-cloud-services >=0.6.44
+    - llama-cloud-services >=0.6.45
     - pydantic !=2.10
     - click >=8.1.7,<9.0.0
     - python >={{ python_min }},<4.0
