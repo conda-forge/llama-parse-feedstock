@@ -1,5 +1,5 @@
 {% set name = "llama-parse" %}
-{% set version = "0.6.58" %}
+{% set version = "0.6.59" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/llama_parse-{{ version }}.tar.gz
-  sha256: 6dbc93ad0f254732278fc7d18589be922a72faca881114eda1a04a5dd6ed5d71
+  sha256: 4ea8e162d99d7eca4ec1c9f15a72fbad8ffe941cd2918f007844fc495cc7ba46
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ requirements:
     - hatchling
     - pip
   run:
-    - llama-cloud-services >=0.6.58
+    - llama-cloud-services >=0.6.59
     - pydantic !=2.10
     - click >=8.1.7,<9.0.0
     - python >={{ python_min }},<4.0
