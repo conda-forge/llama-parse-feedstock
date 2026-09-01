@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: llama-parse
-  version: "0.6.94"
+  version: 0.6.94
 
 package:
   name: ${{ name|lower }}
@@ -19,7 +19,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - hatchling
     - pip
   run:
